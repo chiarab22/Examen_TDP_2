@@ -1,3 +1,4 @@
+package composite;
 import composite.shapes.*;
 
 public class Demo {

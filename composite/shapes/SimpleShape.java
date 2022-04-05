@@ -6,6 +6,11 @@ public class SimpleShape extends Elemento{
         super(precio, codigo);
     }
 
+    public SimpleShape(int codigo) {
+        super(codigo);
+    }
+
+
     @Override
     public void mostrarArticulo() {
         System.out.println("Artículo código: " + getCodigo() + " Precio: " +  getPrecio());

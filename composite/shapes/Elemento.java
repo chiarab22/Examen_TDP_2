@@ -10,6 +10,12 @@ public abstract class Elemento implements Shape{
         this.codigo = codigo;
     }
 
+
+    public Elemento( int codigo) {
+        this.codigo = codigo;
+    }
+
+
     @Override
     public double getPrecio() {
         return Math.round(this.precio*100.0)/100.0;

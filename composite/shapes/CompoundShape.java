@@ -7,16 +7,38 @@ import java.util.List;
 public class CompoundShape extends SimpleShape{
     protected List<Shape> children = new ArrayList<>();
     
-    public CompoundShape(double precio, int codigo) {
-        super(precio, codigo);
+    public CompoundShape(int codigo, Shape ... components) {
+        super(codigo);
+        this.precio = setPrecio();
+        add(components);
+
 
     }
 
     public CompoundShape(Shape ... components) {
         super(0,0);
         add(components);
+    } 
+    
+    public double setPrecio(){
+        double precioL = 0;
+        if (children.size() != 0 ) {
+            for (Shape c : children) {
+                precioL += c.getPrecio();
+            }
+              }else{
+                precioL =0;
+        }
+        return precioL * 0.9;
     }
-
+  
+  @Override
+    public void mostrarArticulo() {
+        for (Shape c : children) {
+                System.out.println("Artículo código: " + c.getCodigo() + " Precio: " +  c.getPrecio());
+                
+            } 
+    }
     public void add(Shape component) {
         children.add(component);
     }

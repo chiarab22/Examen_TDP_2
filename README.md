@@ -1,6 +1,6 @@
 # Examen Patron de Estructuración
 
-Link al repositorio: 
+Link al repositorio: https://github.com/chiarab22/Examen_TDP_2.git
 
 
 ### UML
